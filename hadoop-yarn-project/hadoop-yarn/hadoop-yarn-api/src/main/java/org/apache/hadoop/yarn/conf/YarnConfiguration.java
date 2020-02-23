@@ -1825,6 +1825,27 @@ public class YarnConfiguration extends Configuration {
       "INFO";
 
   /** Prefix for runtime configuration constants. */
+  public static final String WINDOWS_CONTAINER_RUNTIME_PREFIX = NM_PREFIX +
+      "runtime.windows.";
+
+  /**
+   * Comma separated list of runtimes that are allowed when using
+   * LinuxContainerExecutor. The standard values are:
+   * <ul>
+   *   <li>default</li>
+   * </ul>
+   */
+  public static final String WINDOWS_CONTAINER_RUNTIME_ALLOWED_RUNTIMES =
+      WINDOWS_CONTAINER_RUNTIME_PREFIX + "allowed-runtimes";
+
+  public static final String WINDOWS_CONTAINER_RUNTIME_CLASS_FMT =
+      WINDOWS_CONTAINER_RUNTIME_PREFIX + "%s.class";
+
+  /** The default list of allowed runtimes when using WindowsContainerExecutor. */
+  public static final String[] DEFAULT_WINDOWS_CONTAINER_RUNTIME_ALLOWED_RUNTIMES
+      = {"default"};
+
+  /** Prefix for runtime configuration constants. */
   public static final String LINUX_CONTAINER_RUNTIME_PREFIX = NM_PREFIX +
       "runtime.linux.";
 
